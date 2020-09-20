@@ -8,6 +8,7 @@ $('form').submit(function(event){
     $.ajax({
         url: post_endpoint,
         type: "POST",
+        data: id_number,
         success: function(data) {
             json = toJSON(data);
         },
