@@ -31,3 +31,8 @@ h1 {
 .slider:hover {
     opacity: 1;
 }
+
+div.input {
+    align-items: center;
+    justify-content: center;
+}
