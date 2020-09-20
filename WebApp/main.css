@@ -1,4 +1,15 @@
+html{
+    background-color: rgb(247, 247, 247);
+}
+
 h1 {
     text-align: center;
     color: rgb(16, 172, 94);
+    
+}
+
+.runner {
+    width: 10%;
+    height: 12%;
+    align-items: center;
 }
