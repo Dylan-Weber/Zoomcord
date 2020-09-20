@@ -1,10 +1,8 @@
 // Animate slide bars
 var slider = document.getElementById('min_speed_slider');
-var reading = slider.value;
-console.log(slider, reading)
 
 slider.oninput = () => {
-    document.getElementById('min_speed').innerHTML = `Minimum Movement Spped: ${this.value}`;
+    document.getElementById('slider_value').innerText = slider.value;
 }
 
 
