@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title> Zoomcord </title>
+</head>
+<meta charset="UTF-8" lang="en" >
+<body>
+    <div id="settings">
+        <h1> Settings </h1>
+    </div>
+
+    <div class="form" id="min_speed">
+        <form action="/settings">
+            <label for="min_speed"> Minimum Movement Rate: 50</label>
+            <input type="range" id="min_speed_slider" min="0" max="100" value="50" class="slider"><br><br>
+
+            <input type="submit" value="Submit">
+          </form>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>
