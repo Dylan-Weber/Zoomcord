@@ -1,14 +1,21 @@
-// /pair
-// /logout
+// Animate slide bars
+var slider = document.getElementById('min_speed_slider');
+
+slider.oninput = () => {
+    document.getElementById('slider_value').innerText = slider.value;
+}
+
+
+//Post req for max and min_speed
 $('form').submit(function(event){
     event.preventDefault();
     let post_endpoint = $(this).attr("action")
-    let id_number = $(this).serialize();
+    let min_speed = $('#min_speed').value;
 
     $.ajax({
         url: post_endpoint,
         type: "POST",
-        data: id_number,
+        data: `min_speed=${min_speed}`,
         success: function(data) {
             json = toJSON(data);
         },
@@ -19,10 +26,11 @@ $('form').submit(function(event){
         json = toJSON(response);
         status = json['status'];
         if (choose_dir(status)){
-            location.href = 'settings.html';
+            location.href = 'main.html';
+            localStorage.setItem('min_speed', min_speed);
         } else{
             console.log('here')
-            $('#idnum').html('Incorrect ID number, please try again!')
+            //$('#idnum').html('Incorrect ID number, please try again!')
         }
     })
 })
